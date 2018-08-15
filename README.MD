@@ -29,6 +29,25 @@ HTTP 200
 {"id":"{client_id"}
 ```
 
+To retrieve client info:
+
+```HTTP
+GET /client/{id}
+```
+
+Response:
+
+```HTTP
+HTTP 200
+
+{
+    "id":"{client_id}",
+    "balance":200000,
+    "email":"tt@org.com"
+}
+```
+
+
 ### Task
 
 Task is a unit of a job that can be posted on exchanged and performed by Freelancer
