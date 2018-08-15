@@ -35,6 +35,8 @@ Task is a unit of a job that can be posted on exchanged and performed by Freelan
 
 #### Create
 
+NOTE: When client creates a task, funds will be locked from client's account
+
 ```HTTP
 POST /task
 ```
@@ -60,12 +62,13 @@ HTTP 200
 
 #### Update
 
+NOTE: When task's status changes to `closed`, funds will be unlocked and transfered to freelancer's account
+
 ```HTTP
 PUT /task/{id}
 ```
 
 Payload:
-
 
 ```JSON
 {
